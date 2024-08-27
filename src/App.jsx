@@ -6,14 +6,12 @@ import Header from "./components/Header/Header.jsx";
 import TabButton from "./components/Header/TabButton.jsx";
 
 function handleSelect(selectedButton) {
-  tabContent = selectedButton;
   console.log(selectedButton);
 }
 
 function App() {
-  useState('Please click the button');
+  const [ selectedTopic, setSelectedTopic] = useState('Please click the button');
 
-  let tabContent = "Click a button";
   return (
     <div>
       <Header />
@@ -37,7 +35,7 @@ function App() {
             <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
-          {tabContent}
+          {selectedTopic}
         </section>
       </main>
     </div>
