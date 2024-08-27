@@ -4,6 +4,7 @@ import { CORE_CONCEPTS } from "./data";
 import CoreConcept from "./components/CoreConcept";
 import Header from "./components/Header/Header.jsx";
 import TabButton from "./components/Header/TabButton.jsx";
+import { EXAMPLES } from './data';
 
 
 function App() {
@@ -37,7 +38,15 @@ function App() {
             <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
-          {selectedTopic}
+          <div id='tab-content'>
+            <h3></h3>
+            <p></p>
+            <pre>
+              <code>
+
+              </code>
+            </pre>
+          </div>
         </section>
       </main>
     </div>
