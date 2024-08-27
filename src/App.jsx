@@ -11,9 +11,9 @@ function App() {
   
   function handleSelect(selectedButton) {
     setSelectedTopic(selectedButton);
-    console.log(selectedButton);
+    console.log(selectedTopic);
   }
-  
+
   return (
     <div>
       <Header />
