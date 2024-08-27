@@ -5,13 +5,15 @@ import CoreConcept from "./components/CoreConcept";
 import Header from "./components/Header/Header.jsx";
 import TabButton from "./components/Header/TabButton.jsx";
 
-function handleSelect(selectedButton) {
-  console.log(selectedButton);
-}
 
 function App() {
   const [ selectedTopic, setSelectedTopic] = useState('Please click the button');
-
+  
+  function handleSelect(selectedButton) {
+    setSelectedTopic(selectedButton);
+    console.log(selectedButton);
+  }
+  
   return (
     <div>
       <Header />
